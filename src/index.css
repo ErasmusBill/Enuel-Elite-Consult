@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-ocean-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/20;
+  }
+  
+  .glass-dark {
+    @apply bg-ocean-900/40 backdrop-blur-md border border-white/10;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-sand-500 hover:bg-sand-600 text-ocean-900 font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl active:scale-95 disabled:opacity-50;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-sand-500 text-sand-500 hover:bg-sand-500 hover:text-ocean-900 font-semibold rounded-full transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 bg-white border border-ocean-100 rounded-xl focus:ring-2 focus:ring-sand-400 focus:border-transparent outline-none transition-all;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ocean-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ocean-200 rounded-full hover:bg-ocean-300 transition-colors;
+}
+
+.hover-lift {
+  @apply transition-transform duration-300 hover:-translate-y-1;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-ocean-700 to-teal-500;
+}
